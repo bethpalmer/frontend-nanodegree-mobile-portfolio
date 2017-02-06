@@ -15,6 +15,7 @@ module.exports = function(grunt) {
 		        },
 	        	files: {
 	        		'views/images-opt/pizzeria.jpg' :  'views/images/pizzeria.jpg',
+	        		'views/images-opt/pizzeria-sm.jpg' :  'views/images/pizzeria-sm.jpg',
 	        		'img-opt/profilepic.jpg' : 'img/profilepic.jpg'
 	       		}
 	      	}
