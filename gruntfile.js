@@ -11,7 +11,7 @@ module.exports = function(grunt) {
 		imagemin : {
 			static : {
 	        	options: {
-	          		optimizationLevel: 3,
+	          		optimizationLevel: 7,
 		        },
 	        	files: {
 	        		'views/images-opt/pizzeria.jpg' :  'views/images/pizzeria.jpg',
