@@ -53,3 +53,34 @@ The portfolio was built on Twitter's <a href="http://getbootstrap.com/">Bootstra
 
 * <a href="http://getbootstrap.com/css/">Bootstrap's CSS Classes</a>
 * <a href="http://getbootstrap.com/components/">Bootstrap's Components</a>
+
+
+
+### Optimisations Made
+
+# For part 1 - optimizing index.html
+
+* Moved inline analytics <script> to a separate file and loaded this asyncnchronously to remove from the CRP.
+* Added media queries to specific css files to remove from CRP.
+* Inlined css styles to reduce CRP roundtrip by 1.
+* Saved the first 3 list images locally.
+* Reduced image size of pizzeria.jpg using a smaller/appropriate native version for index.html.
+* Optimized all images firstly using Illustrator, and then with Grunt imagemin.
+* Loaded google fonts using Web Font Loader JavaScript.
+* Added .htaccess file to the root directory - which in my case is bethpalmer.co.uk - to enable compression and caching of files for this project which can be found at bethpalmer.co.uk/web-op. I have also left this in the root of the project repo on github so that you can check the contents, although it doesn't show in the bethpalmer.co.uk/web-op directory as this is not the correct place for it.
+
+# For part 2 - optimizing pizza javascript to run at 60fps
+
+* Replaced all querySelectors with getELementsByID or getElementsByClass selectors to reduce querying of the DOM.
+* Caching elements in a loop that remain constant, outside of the loop.
+* Separating all instances of where layout and style processes were happening within the same loop. 
+* Optimizing event listeners and animations by using requestAnimationFrame.
+* Using transform / translate to move elements to keep changes on the composite layer rather than recalculating  style and layout.
+* Working out exactly how many elements are needed to render on the screen rather than including unnecessary ones.
+
+
+### Notes
+
+* I decided to host the project on my own site for ease for myself, and becuase of the complication of not being able to utilise .htcaccess files on github pages. But I don't see from the project details / rubric that this would be problematic.
+
+
